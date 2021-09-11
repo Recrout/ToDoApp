@@ -1,0 +1,9 @@
+.idea
+*.egg
+*.egg-info
+media/
+venv/
+*.pyc
+.pyc
+/__pycache__/
+todo/todo_app/__pycache__/
