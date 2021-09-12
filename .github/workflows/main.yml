@@ -36,30 +36,6 @@ jobs:
        host: 13.51.72.131
        username: ubuntu
        port: 22
-       key: MIIEpAIBAAKCAQEAoab7uZAecJW9P4Mjyh6PXP2pm0ZcfsON3RheIFrXlmLMtY2g
-xLFUT9RgkYucCizsDetjyI3/+2EIeuH8bnVgsGyIVkVtETqrcwP4FGU2gEgPNhbm
-RkxHzSOQA0VsWR31OXpMweh1GT5amwjdCoXlZNzPmLlT8Uf1hemCK89XEJjmYE9q
-LAB6AISvKoB5AQgh+9f0rLTVozPZrDCO5mFzldLPtcHd5wRY2hbjvoCOJXEDFqdq
-D+j0Ju1AbLoZOJ5Rd3ZMP/i9TtTqYqDKPgB2EsKM5Wbm4OQNzSn8XXeMWTZldMpn
-nFohp33g+LsxeXOZC8ztWt1/1i4GHvsJYPxiJwIDAQABAoIBAFddxFa6CXmXtDyL
-R+CJO7pqbiw5juwEDLwd22FpN3NT2oeVD/q+TG8IvVhsN91YAgxT2A4gkOTvwIGJ
-ecDJN4SiY90ckKHrL5Zt4rpDKX2TdIUrQzFjMLsyKTdbYf+YLVzvOGTkmcUW6ik4
-VR7G1v/4R0qnfzK8TXoehfffi5Kv8eHeyCnyxlCvnz0QgZ9Y2h05txlsqIy95Em5
-qi9QUd9uiowowxp7U/1ozDh+G0580hSewTAYPwKRjd14F+yzMa1pVLidU1x0ENny
-JEXWEs3O+jjYORWI2skP5atpFrW+LlP/JbxkbkKGPEFXZQ4yxQvLx1odRrfS38sf
-vkdhyeECgYEA7bkJr1fHmI5vL72aIQl3CAdwsV4natbsDr+B6kDXaPjx+8h6+UPs
-1YoW8MhbQdos3dEgHXFw1/rafVoAwBFNR/CMevLE7OqhSYTdD+abLLatlrVZbaEC
-4NocCDD57cnCqNev+V/5DozMqi6/4dJu2kVfgvOabtSlkYZszMZn8tUCgYEArhSx
-WQyiOkMBDwvhATVjTAqFWyn7lGsnQuA1MSSrE8d1wk0PvNyxPVgs+rqhsz0vnX+w
-mVN+nw6q4ms7ovSkr6tvItfes9gbXP/bY6swfetZGlOnAHqVDXszxwzJAHzbPB71
-EOq//yKF+SBlmME9ymDjhSGzDwDT4o5TIlSspwsCgYEAzFKTgXMYKgaaiFUVybmB
-5pPGh5yekpTh1hdCSZ6rxxzZmAiLsf1w7WVALHp4/VPR5mGdkdD0JZ8F9mHKbUsx
-uliF1hMdsWhFcpRRER6rVzY4Y2XB1JlkiPDO0TePSZN1zXt9VADqZ1gbfVarNCST
-hOXFnx9UKFh7amY405TguXUCgYEAjCMQWdV3y1shQRGZArYNx6s4i5kSc/qG0qlX
-aMZSCkwpmk8a+jjXXcDcBMO1ZGs/J5Uhf2zdpAHUwwz8J0S2RszFXNFW8IRqEsXN
-wUCQeu24/x6UdCg6UW360qSSMxhQDOgG9KVmBmeuXk0cPIpjycWRoxzr3ooWCG32
-ss5jZt0CgYBjZr4++5fqJQhhWm2rPCqj2gJioV9f36/s8b+khvQAN95tp9hSFyH/
-U1qTwxgifcJYsnQIfoIT0HNoqT/H1WD01v0uWinif9MaK6M4iW0ZsN8IgoXd0caB
-xzE/mYS8uze2M3aPqhPdrbiB4DENCCXZgME2i8emkAPgCM0n2gQFfw==
+       key: ${{ secrets.SSH_KEY }}
        source: "build/"
        target: "/home/recrout/ansible/roles/deploy_apache_web/files"
