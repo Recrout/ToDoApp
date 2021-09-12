@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI-CD-Pipline-to-AWS-Elastic-Beastalk
+name: CI-Pipline-to-AWS
 env:
   EB_PACKAGE_S3_BUCKET_NAME  : "adv-it-flask-application-packages-recrout"
   EB_APPLICATION_NAME        : "Myflaskpythonfirstapplication"
@@ -11,10 +11,10 @@ env:
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches:  
-      - frontend
-      - main
+#  push:
+ #   branches:  
+  #    - frontend
+   #   - main
 
 
   # Allows you to run this workflow manually from the Actions tab
@@ -37,5 +37,5 @@ jobs:
        username: ubuntu
        port: 22
        key: ${{ secrets.SSH_KEY }}
-       source: "build/"
+       source: "/"
        target: "/home/recrout/ansible/roles/deploy_apache_web/files"
