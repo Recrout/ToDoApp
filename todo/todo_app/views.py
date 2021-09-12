@@ -1,9 +1,14 @@
 from django.contrib.auth.models import User, Group
+from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import permissions
 from .serializers import TodoSerializer, TodoListSerializer
 from .models import ToDo
 from rest_framework import generics
+
+
+def index(request):
+    return render(request, 'index.html')
 
 
 class TodoListViewSet(viewsets.ModelViewSet):
@@ -13,6 +18,8 @@ class TodoListViewSet(viewsets.ModelViewSet):
     queryset = ToDo.objects.all()
     serializer_class = TodoListSerializer
     permission_classes = [permissions.AllowAny]
+
+
 #     # queryset = ToDo.objects.all()
 #     serializer_class = TodoListSerializer
 #     permission_classes = [permissions.AllowAny]

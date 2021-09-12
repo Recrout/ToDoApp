@@ -24,13 +24,11 @@ from django.conf.urls import url
 
 from .yasg import urlpatterns as doc_urls
 
-
 urlpatterns = [
+    path('', include('todo_app.urls')),
     path('admin/', admin.site.urls),
-    path("", include('todo_app.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('rest_framework.urls')),
 ]
 
 urlpatterns += doc_urls
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

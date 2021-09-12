@@ -8,7 +8,7 @@ class ToDo(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     text_todo = models.TextField(max_length=300)
-    priority = models.IntegerField(blank=True, null=True, default=id)
+    priority = models.IntegerField(blank=True, null=True)
     completed = models.BooleanField(blank=True, null=True)
 
     def __str__(self):
