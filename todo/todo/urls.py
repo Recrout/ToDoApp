@@ -30,6 +30,10 @@ urlpatterns = [
     url(r'favicon\.ico', RedirectView.as_view(url='/static/favicon.ico')),
     url(r'manifest\.json', RedirectView.as_view(url='/static/manifest.json')),
     path('api/', include('rest_framework.urls')),
+
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
+    path('auth/', include('djoser.urls.jwt')),
 ]
 
 urlpatterns += doc_urls

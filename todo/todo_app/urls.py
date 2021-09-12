@@ -8,7 +8,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 # router.register('', views.index)
 router.register(r'todo', views.TodoViewSet)
-router.register(r'todolist', views.TodoListViewSet)
+# router.register(r'todolist', views.TodoListViewSet)
 
 urlpatterns = [
     # path('api/todos/', views.TodoListViewSet.as_view()),
