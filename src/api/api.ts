@@ -15,7 +15,7 @@ class Api {
     }
 
     GetTodos = () : Promise<AxiosResponse<TodoItem[]>> => {
-        return this.axiosInstance.get<TodoItem[]>(('/todo'))
+        return this.axiosInstance.get<TodoItem[]>(('/todo/'))
     }
 
     CreateTodo = (todo : TodoItem) : Promise<AxiosResponse<void>> => {

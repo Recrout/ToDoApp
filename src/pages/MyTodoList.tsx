@@ -18,7 +18,7 @@ const MyTodoList: FC = () => {
     const [todoItems, setTodoItems] = useState<TodoItem[]>([])
     const [todoCreated, setTodoCreated] = useState(false)
 
-    const api = new Api("http://192.168.0.102:8000/")
+    const api = new Api()
 
     useEffect(() => {
         api.GetTodos().then(r => {
