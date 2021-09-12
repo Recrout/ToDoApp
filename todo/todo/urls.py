@@ -27,6 +27,8 @@ from .yasg import urlpatterns as doc_urls
 urlpatterns = [
     path('', include('todo_app.urls')),
     path('admin/', admin.site.urls),
+    url(r'favicon\.ico', RedirectView.as_view(url='/static/favicon.ico')),
+    url(r'manifest\.json', RedirectView.as_view(url='/static/manifest.json')),
     path('api/', include('rest_framework.urls')),
 ]
 
