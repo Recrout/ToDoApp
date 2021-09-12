@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1e)_ge0+xz(x&x$-ms&e&)_&71@rq#p$6!gy=de1z9+*9$onnt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.102', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['192.168.0.102', '127.0.0.1', 'localhost', '0a6c-5-18-235-64.ngrok.io']
 
 # Application definition
 
@@ -205,3 +205,12 @@ CORS_ALLOW_HEADERS = ['*']
 #     "http://localhost:3000",
 #     "http://192.168.0.101:3000",
 # ]
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'api_key': {
+            'type': 'apiKey',
+            'in': 'header',
+            'name': 'Authorization'
+        }
+    },
+}
